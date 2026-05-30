@@ -8,7 +8,7 @@
     <meta property="og:title" content="Administrador de DOIs - Revista [in]genios">
     <meta property="og:description" content="Preparar artículos, asignar DOI y generar XML para Crossref.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://administrador-de-dois.netlify.app/">
+    <meta property="og:url" content="https://rarmandocatala-ctrl.github.io/administrador-de-metadatos/">
     <style>
         body { font-family: system-ui, -apple-system, sans-serif; background: #f4f4f9; color: #333; margin: 0; padding: 20px; }
         .container { max-width: 1400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
@@ -940,7 +940,7 @@
         <section id="que-es">
             <h2>Qué hace este programa</h2>
             <p>Sirve para organizar los artículos de la revista <strong>[in]genios</strong>, asignar un <strong>DOI</strong> a cada uno y generar un <strong>archivo XML</strong> listo para enviar a Crossref (el registro internacional de DOIs).</p>
-            <p>No necesita instalarse: funciona en el navegador (Chrome, Edge o Firefox) en <a href="https://administrador-de-dois.netlify.app/">administrador-de-dois.netlify.app</a>.</p>
+            <p>No necesita instalarse: funciona en el navegador (Chrome, Edge o Firefox) en <a href="https://rarmandocatala-ctrl.github.io/administrador-de-metadatos/">rarmandocatala-ctrl.github.io/administrador-de-metadatos</a>.</p>
             <div class="caja-tip">
                 <strong>Qué necesita tener a mano:</strong> el archivo XML maestro con los números ya publicados (si los tiene) y, para números nuevos, los datos de cada artículo (título, autores, enlace web, etc.).
             </div>
@@ -951,7 +951,7 @@
             <div class="paso">
                 <span class="paso-num">1</span>
                 <div class="paso-body">
-                    <p>Abra en su navegador <a href="https://administrador-de-dois.netlify.app/">administrador-de-dois.netlify.app</a> (Chrome, Edge o Firefox). Puede guardar ese enlace en favoritos.</p>
+                    <p>Abra en su navegador <a href="https://rarmandocatala-ctrl.github.io/administrador-de-metadatos/">rarmandocatala-ctrl.github.io/administrador-de-metadatos</a> (Chrome, Edge o Firefox). Puede guardar ese enlace en favoritos.</p>
                 </div>
             </div>
             <div class="paso">
@@ -1513,6 +1513,8 @@
 
         if (n === 2) {
             renderChipsCatalogo();
+        }
+        if (n === 2 || n === WIZARD_MAX) {
             actualizarBotonesExport();
         }
 
@@ -2512,6 +2514,7 @@
         guardarNumerosAnadirLS();
         limpiarFormularioAnadir(false);
         renderChipsCatalogo();
+        actualizarBotonesExport();
     }
 
     function editarNumeroAnadir(id) {
